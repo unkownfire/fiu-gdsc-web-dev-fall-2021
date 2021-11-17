@@ -4,9 +4,19 @@ import './CardGrid.css';
 import useWindowDimensions from './WindowDimension.js';
 import RecipeCard from '../RecipeCard';
 import {Row, Col, Container} from 'react-bootstrap'
+
+
+function max(num1, num2)
+{
+  if(num1 > num2)
+    return num1;
+  return num2;
+}
+
 const CardGrid = (props) => {
+  const maxWidth = 1000;
   const { height, width } = useWindowDimensions();
-  var cols = Math.floor(width / 250);
+  var cols = Math.floor(max(width,maxWidth) / 250);
   var rows = Math.ceil(props.num/cols);
   var rowComponents = [];
   for (var i = 0; i < rows; i++) {
