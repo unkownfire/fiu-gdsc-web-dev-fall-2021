@@ -5,7 +5,7 @@ import {Route} from 'react-router-dom'
 import Home from './components/Home'
 import Dashboard from './components/Dashboard'
 import RecipeCard from './components/RecipeCard'
-
+import CardGrid from './components/CardGrid/CardGrid'
 function App() {
   return (
     <div className="App">
@@ -15,7 +15,6 @@ function App() {
       <Route exact path="/Dashboard" component={Dashboard}/>
 
 
-      <Route exact path="/test" component={RecipeCard}/>
 
     </div>
   )
